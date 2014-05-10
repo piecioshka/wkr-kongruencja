@@ -34,23 +34,58 @@
         _enterHandler: function (e) {
             // if `enter`
             if (e.keyCode === 13) {
-                this._printResult(this._calculate());
+                if (this._checkParams()) {
+                    this._printResult(this._calculate());
+                }
             } else {
                 this._clearResult();
             }
         },
 
         _submitHandler: function (e) {
-            this._printResult(this._calculate());
+            if (this._checkParams()) {
+                this._printResult(this._calculate());
+            }
             e.preventDefault();
+        },
+
+        _checkParams: function () {
+            var s = this.settings;
+            var a = s.first.val();
+            var b = s.second.val();
+            var c = s.third.val();
+
+            var errors = [];
+            var status;
+
+            if (!(/^\d+$/).test(a)) {
+                errors.push('Incorrect value of "first" param');
+            }
+
+            if (!(/^\d+$/).test(b)) {
+                errors.push('Incorrect value of "second" param');
+            }
+
+            if (!(/^\d+$/).test(c)) {
+                errors.push('Incorrect value of "third" param');
+            }
+
+            if (_.size(errors)) {
+                alert(_.first(errors));
+            }
+
+            // update status by error list
+            status = !_.size(errors);
+
+            return status;
         },
 
         _calculate: function () {
             var s = this.settings;
-            var first = s.first.val();
-            var second = s.second.val();
-            var third = s.third.val();
-            return (first - second) % third;
+            var a = s.first.val();
+            var b = s.second.val();
+            var c = s.third.val();
+            return (a - b) % c;
         },
 
         _printResult: function (result) {
