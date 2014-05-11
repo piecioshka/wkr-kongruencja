@@ -59,15 +59,15 @@
             var status;
 
             if (!(/^\d+$/).test(a)) {
-                errors.push('Incorrect value of "first" param');
+                errors.push('Niepoprawna wartość pierwszego parametru');
             }
 
             if (!(/^\d+$/).test(b)) {
-                errors.push('Incorrect value of "second" param');
+                errors.push('Niepoprawna wartość drugiego parametru');
             }
 
             if (!(/^\d+$/).test(c)) {
-                errors.push('Incorrect value of "third" param');
+                errors.push('Niepoprawna wartość trzeciego parametru');
             }
 
             if (_.size(errors)) {
@@ -89,7 +89,7 @@
         },
 
         _printResult: function (result) {
-            var stringResult = (result === 0) ? 'True' : 'False';
+            var stringResult = (result === 0) ? 'Tak, przystaje' : 'Nie, nie przystaje';
             var $r = this.settings.result;
             $r.parent().removeClass('hidden');
             $r.text(stringResult);
