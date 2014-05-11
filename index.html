@@ -10,14 +10,20 @@
 </head>
 <body>
     <article class="center-block">
+        <header class="bg-warning">
+            <h4 class="text-center">Kongruencja</h4>
+        </header>
+
         <section class="inputs-block bg-primary">
-            <input id="first" class="input" type="text" pattern="\d*"/> &equiv;
-            <input id="second" class="input" type="text" pattern="\d*"/> mod
-            <input id="third" class="input" type="text" pattern="\d*"/>
+            <input id="first" class="input" type="text" pattern="\d*" placeholder="First" /> &equiv;
+            <input id="second" class="input" type="text" pattern="\d*" placeholder="Second" /> mod
+            <input id="third" class="input" type="text" pattern="\d*" placeholder="Third" />
         </section>
+
         <section class="submit-block bg-info">
             <button id="submit" class="btn btn-danger btn-lg btn-block" type="button">Check</button>
         </section>
+
         <section class="result-block bg-success hidden">
             <h4 id="result"></h4>
         </section>
