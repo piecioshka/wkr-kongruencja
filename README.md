@@ -1,6 +1,10 @@
 # Wstęp do kryptologii - kongruencja
 
-> Mini aplikacja pozwalająca sprawdzić czy dana liczba przystaje do drugiej modulo trzecia.
+Mini aplikacja pozwalająca sprawdzić czy dana liczba przystaje do drugiej modulo trzecia.
+
+## Demo 🎉
+
+<https://piecioshka.github.io/wkr-kongruencja/>
 
 ## License
 
