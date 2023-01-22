@@ -2,7 +2,7 @@
 
 Mini aplikacja pozwalająca sprawdzić czy dana liczba przystaje do drugiej modulo trzecia.
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/wkr-kongruencja/>
 
